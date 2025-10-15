@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp">
+
+    <View
+        android:id="@+id/checkpointDot"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/ic_circle_ins"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+
+    <View
+        android:id="@+id/verticalLine"
+        android:layout_width="6dp"
+        android:layout_height="0dp"
+        android:background="@color/purple"
+        app:layout_constraintTop_toBottomOf="@id/checkpointDot"
+        android:layout_marginStart="11.5dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/stepNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/checkpointDot"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/stepDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/stepNumber"
+        app:layout_constraintTop_toBottomOf="@id/stepNumber"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">Can Cook</string>
+
+    //fragment
+    <string name="Home">Home</string>
+    <string name="Search">Search</string>
+    <string name="Saved">Saved</string>
+
+    //logo
+    <string name="appLogo">CanCook Logo</string>
+
+    //Menu Item
+    <string name="menuHome">Home</string>
+    <string name="menuSearch">Search</string>
+    <string name="menuSaved">Saved</string>
+
+
+    //HomeFragment
+    <string name="greetingsHead">What do you want to cook?</string>
+    <string name="greetingsSub">Let\'s start cooking!</string>
+    <string name="recommendationText">Recommendation</string>
+    <string name="popularText">Popular</string>
+    <string name="seeMoreText">See more</string>
+
+    //SearchFragment
+    <string name="filter_category_icon_description">Burgir</string>
+
+    //SavedFragment
+    <string name="collectionText">Collection</string>
+    <string name="collectionIcon">Collection Icon</string>
+    <string name="expandIndicator">Expand Icon</string>
+    <string name="floatingDescription">Add recipe</string>
+    <string name="myRecipeIcon">Owned Recipe Icon</string>
+    <string name="myRecipeText">My Recipe</string>
+
+    //Search findings
+    <string name="searchFindings">No result for search</string>
+
+    //viewRecipe
+    <string name="back_button_desc">Go back</string>
+    <string name="recipeHeadingText">Recipe</string>
+    <string name="bookmark_button_desc">Recipe bookmark</string>
+    <string name="time_icon_desc">Time icon</string>
+    <string name="difficulty_icon_desc">Difficulty icon</string>
+    <string name="rating_icon_desc">Rating icon</string>
+    <string name="recipe_image_desc">Recipe image holder</string>
+    <string name="persServing_icon_desc">Per serving icon</string>
+    <string name="toggle_desc">toggle icon</string>
+    <string name="MealType">Meal Type</string>
+
+    //Add New Recipe
+    <string name="close_button_desc">Add recipe back button</string>
+    <string name="fav_button_desc">Add to fav icon</string>
+    <string name="closeButtonIcon">Close button</string>
+
+    //Add New Recipe - Heading Text
+    <string name="newRecipeText">New Recipe</string>
+    <string name="titleText">Title</string>
+    <string name="ratingText">Rating</string>
+    <string name="ingredientsText">Ingredients</string>
+    <string name="servingText">Serving</string>
+    <string name="caloriesServingText">Calories / Serving</string>
+    <string name="instructionsText">Instructions</string>
+    <string name="descriptionText">Description</string>
+    <string name="prepTimeText">Prep Time</string>
+    <string name="cookTimeText">Cook Time</string>
+    <string name="tagsText">Tags</string>
+    <string name="cuisineText">Cuisine</string>
+    <string name="difficultyText">Difficulty</string>
+
+    //Button Text
+    <string name="publishText">Publish</string>
+    <string name="cancelText">Cancel</string>
+
+    <string name="ratingSample">0.0</string>
+    <string name="timeSample">30mins</string>
+    <string name="numberSample">400</string>
+    <string name="descriptionSample">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a
+        galley of type and scrambled it to make a type specimen book.</string>
+    <string name="clearInputIcon">Clear button</string>
+    <string name="recipeTitle">Your recipe title</string>
+    <string name="savedButton">Save button</string>
+    <string name="uploadIcon">Upload button</string>
+    <array name="difficulty_levels">same</array>
+
+</resources>
