@@ -1,6 +1,7 @@
 package com.example.cancook
 
 import android.app.Application
+import com.example.cancook.di.localModule
 import com.example.cancook.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -13,6 +14,7 @@ class CanCookApp : Application() {
             modules(
                 listOf(
                     appModule,
+                    localModule,
                     repositoryModule,
                     useCaseModule,
                     viewModelModule

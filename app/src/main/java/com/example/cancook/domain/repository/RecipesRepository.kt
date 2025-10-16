@@ -13,4 +13,7 @@ interface RecipesRepository {
     suspend fun getLimitedPopularRecipes(limit: Int): List<Recipe>
     fun createPagingSource(filter: RecipesPagingSource.FilterType?): RecipesPagingSource
     fun searchRecipes(query: String, pageSize: Int = 10): Flow<PagingData<Recipe>>
+    suspend fun getMealTypes(): List<String>
+    suspend fun getTags(): List<String>
+    suspend fun getDifficulties(): List<String>
 }

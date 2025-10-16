@@ -67,6 +67,9 @@
     <string name="tagsText">Tags</string>
     <string name="cuisineText">Cuisine</string>
     <string name="difficultyText">Difficulty</string>
+    <string name="addNewIngredient">Add more ingredients</string>
+    <string name="addNewInstruction">Add more instruction</string>
+    <string name="addDescription">Description here</string>
 
     //Button Text
     <string name="publishText">Publish</string>

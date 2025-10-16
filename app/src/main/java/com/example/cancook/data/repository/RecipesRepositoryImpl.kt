@@ -80,4 +80,36 @@ class RecipesRepositoryImpl(
         ).flow
     }
 
+    override suspend fun getMealTypes(): List<String> {
+        return try {
+            val recipes = api.getRecipes(limit = 100, skip = 0).recipes // adjust limit
+            recipes.flatMap { it.mealType ?: emptyList() } // `it` is RecipeDto
+                .distinct()
+                .sorted()
+        } catch (e: Exception) {
+            emptyList()
+        }
+    }
+
+    override suspend fun getTags(): List<String> {
+        return try {
+            val recipes = api.getRecipes(limit = 100, skip = 0).recipes
+            recipes.flatMap { it.tags ?: emptyList() }
+                .distinct()
+                .sorted()
+        } catch (e: Exception) {
+            emptyList()
+        }
+    }
+
+    override suspend fun getDifficulties(): List<String> {
+        return try {
+            val recipes = api.getRecipes(limit = 100, skip = 0).recipes
+            recipes.mapNotNull { it.difficulty }
+                .distinct()
+                .sorted()
+        } catch (e: Exception) {
+            emptyList()
+        }
+    }
 }
