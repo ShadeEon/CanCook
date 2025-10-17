@@ -11,6 +11,7 @@ import com.example.cancook.R
 import com.example.cancook.data.local.RecipeDao
 import com.example.cancook.presentation.adapter.LocalRecipeAdapter
 import com.example.cancook.presentation.screen.activity.AddRecipeActivity
+import com.example.cancook.presentation.screen.activity.ViewRecipeActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -32,10 +33,23 @@ class SavedFragment : Fragment(R.layout.fragment_saved) {
             startActivity(intent)
         }
 
+        adapter = LocalRecipeAdapter(
+            onItemClick = { recipe ->
+                val intent = Intent(requireContext(), AddRecipeActivity::class.java)
+                intent.putExtra("local_recipe", recipe) // key changed
+                startActivity(intent)
+            },
+            onFavoriteClick = { recipe ->
+
+            }
+        )
+
         myRecipeRecyclerView = view.findViewById(R.id.myRecipeRecyclerView)
-        adapter = LocalRecipeAdapter()
+        myRecipeRecyclerView.layoutManager = GridLayoutManager(requireContext(), 1)
+
         myRecipeRecyclerView.adapter = adapter
         myRecipeRecyclerView.visibility = View.VISIBLE
+
         viewLifecycleOwner.lifecycleScope.launch {
             recipeDao.getAllLocalRecipesFlow().collectLatest { recipes ->
                 adapter.submitList(recipes)

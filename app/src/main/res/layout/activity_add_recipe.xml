@@ -34,12 +34,12 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/saveButton"
+            app:layout_constraintEnd_toStartOf="@+id/updateButton"
             app:layout_constraintStart_toEndOf="@+id/closeButton"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/saveButton"
+            android:id="@+id/updateButton"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:contentDescription="@string/savedButton"
@@ -206,7 +206,7 @@
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_upload"
                     android:contentDescription="@string/uploadIcon"
-                    android:scaleType="center"
+                    android:scaleType="centerCrop"
                     android:visibility="gone"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -454,6 +454,8 @@
                     android:layout_height="48dp"
                     android:hint="Type ingredient and press Enter"
                     android:inputType="text"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
                     android:autofillHints=""/>
 
             </LinearLayout>
@@ -573,6 +575,8 @@
                     android:layout_height="48dp"
                     android:hint="Type instruction and press Enter"
                     android:inputType="text"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
                     android:autofillHints=""/>
 
             </LinearLayout>

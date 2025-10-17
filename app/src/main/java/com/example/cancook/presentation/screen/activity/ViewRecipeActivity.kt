@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.cancook.R
 import com.example.cancook.databinding.ActivityViewRecipeBinding
 import com.example.cancook.domain.model.Recipe
@@ -34,14 +35,23 @@ class ViewRecipeActivity : AppCompatActivity() {
             insets
         }
 
-        val recipe = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+        val apiRecipe: Recipe? = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             intent.getParcelableExtra("recipe", Recipe::class.java)
         } else {
             @Suppress("DEPRECATION")
             intent.getParcelableExtra("recipe")
         }
 
-        recipe?.let { displayRecipe(it) }
+        val localRecipe: com.example.cancook.data.local.RecipeEntity? = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            intent.getParcelableExtra("local_recipe", com.example.cancook.data.local.RecipeEntity::class.java)
+        } else {
+            @Suppress("DEPRECATION")
+            intent.getParcelableExtra("local_recipe")
+        }
+
+        when {
+            apiRecipe != null -> displayRecipe(apiRecipe)
+        }
 
         binding.backButton.setOnClickListener { finish() }
 
