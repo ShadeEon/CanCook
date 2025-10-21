@@ -14,6 +14,6 @@ data class RecipeDto(
     val tags: List<String>?,
     val image: String?,
     val reviewCount: Int?,
-    val rating: Float?,
+    val rating: Double?,
     val mealType: List<String>?
 )

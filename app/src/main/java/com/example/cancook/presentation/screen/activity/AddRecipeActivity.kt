@@ -424,7 +424,7 @@ class AddRecipeActivity : AppCompatActivity() {
         val name = titleInputField.text.toString().trim()
         val cuisine = cuisineEditText.text.toString().trim()
         val description = descriptionInputField.text.toString().trim()
-        val rating = ratingInputField.text.toString().toFloatOrNull() ?: 0f
+        val rating = ratingInputField.text.toString().toDoubleOrNull() ?: 0.0
         val prepTime = prepTimeInputField.text.toString().toIntOrNull() ?: 0
         val cookTime = cookTimeInputField.text.toString().toIntOrNull() ?: 0
         val servings = servingInputField.text.toString().toIntOrNull() ?: 1

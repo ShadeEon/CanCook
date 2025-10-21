@@ -18,7 +18,7 @@ data class Recipe(
     val caloriesPerServing: Int?,
     val tags: List<String>,
     val imageUrl: String?,
-    val rating: Float?,
+    val rating: Double?,
     val reviewCount: Int?,
     val mealType: List<String>
 ): Parcelable

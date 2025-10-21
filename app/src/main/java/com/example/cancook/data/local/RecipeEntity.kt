@@ -23,7 +23,7 @@ data class RecipeEntity(
     @ColumnInfo(name = "calories_per_serving") val caloriesPerServing: Int?,
     @ColumnInfo(name = "tags") val tags: List<String>,
     @ColumnInfo(name = "image_url") val imageUrl: String?,
-    @ColumnInfo(name = "rating") val rating: Float?,
+    @ColumnInfo(name = "rating") val rating: Double?,
     @ColumnInfo(name = "review_count") val reviewCount: Int?,
     @ColumnInfo(name = "meal_type") val mealType: List<String>,
     @ColumnInfo(name = "is_favorite") val isFavorite: Boolean = false,

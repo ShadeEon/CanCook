@@ -56,9 +56,22 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.transport.runtime)
+
     testImplementation(libs.junit)
+    testImplementation(libs.junit.jupiter)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.2")
+
+    //Mockito
+    testImplementation("org.mockito:mockito-core:5.12.0")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:5.3.1")
+    testImplementation("org.mockito:mockito-junit-jupiter:5.12.0")
+
+    // Coroutines testing
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
 
     //retrofit + Gson
     implementation("com.squareup.retrofit2:retrofit:3.0.0")
@@ -90,10 +103,16 @@ dependencies {
     val paging_version = "3.3.6"
     implementation("androidx.paging:paging-runtime:$paging_version")
 
+    // Paging (if needed for Flow<PagingData>)
+    testImplementation("androidx.paging:paging-common:$paging_version")
+
     //cardView
     implementation("androidx.cardview:cardview:1.0.0")
 
     //pagingadapter
     implementation("androidx.paging:paging-runtime-ktx:3.3.0")
+}
 
+tasks.withType<Test> {
+    useJUnitPlatform()
 }
